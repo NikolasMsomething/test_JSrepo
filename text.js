@@ -1,4 +1,9 @@
 function createGreeting(name, age) {
+    if(name || age === undefined) {
+        throw new Error("Arguments are invalid");
+    } else if (isNaN(age)) {
+        throw new Error("Please parse to integer!")
+    }
   return `Hey I'm ${name} and I'm ${age} years old`
 }
 
