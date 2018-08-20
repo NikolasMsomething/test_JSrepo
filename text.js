@@ -10,6 +10,14 @@ function yearsOld(age) {
     return `I was born in ${algo}`;
 }
 
+try {
+    createGreeting("Zoo", 100) 
+
+    } catch(err) {
+      console.log("ERROR!");
+    }
+
+
 const nicksAge = yearsOld(21);
 
 const sayHiToNick = createGreeting("Nick", 21);
