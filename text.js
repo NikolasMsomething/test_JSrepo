@@ -49,6 +49,27 @@ function beyond(num) {
     }
 }
 
+function decode(str) {
+  let newAr = str.split(" ")
+  let newAr2 = []
+    for(let i = 0; i < newAr.length; i++) {
+            if(newAr[i][0] === "a") {
+              newAr2.push(newAr[i][2 + 1]);
+            } else if(newAr[i][0] === "b") {
+                newAr2.push(newAr[i][3 + 1]);
+            } else if(newAr[i][0] === "c") {
+                newAr2.push(newAr[i][4 + 1]);
+            } else if(newAr[i][0] === "d") {
+                newAr2.push(newAr[i][5 + 1]);
+            }  else  {
+                newAr2.push(" ");
+            }
+    }
+
+  let boop = newAr2.join("");
+  return boop;
+}
+
 const nicksAge = yearsOld(21);
 
 const sayHiToNick = createGreeting("Nick", 21);
