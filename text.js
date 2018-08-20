@@ -3,8 +3,11 @@ function createGreeting(name, age) {
 }
 
 function yearsOld(age) {
-  let algo = 2018 - age;
-  return `I was born in ${algo}`;
+    if(age < 0) {
+        throw new Error("Age can not be negative")
+    }
+    let algo = 2018 - age;
+    return `I was born in ${algo}`;
 }
 
 const nicksAge = yearsOld(21);
