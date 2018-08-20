@@ -37,6 +37,17 @@ function jediName(firstName, lastName) {
       return jedi;
 }
 
+function beyond(num) {
+    if(num === Infinity) {
+      console.log("And Beyond");
+    } else if(num > 0 && num !== Infinity) {
+        console.log("To Infinity");
+    } else if(num < 0 && num !== Infinity) {
+        console.log("To negative infinity");
+    } else if(num === 0) {
+        console.log("Staying home");
+    }
+}
 
 const nicksAge = yearsOld(21);
 
