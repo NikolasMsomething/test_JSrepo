@@ -1,7 +1,14 @@
-function createGreeting() {
-  return "Hey im nick";
+function createGreeting(name, age) {
+  return `Hey I'm ${name} and I'm ${age} years old`
 }
 
-const sayHiToNick = createGreeting();
+function yearsOld(age) {
+  let algo = 2018 - age;
+  return `I was born in ${algo}`;
+}
 
-console.log(sayHiToNick);
+const nicksAge = yearsOld(21);
+
+const sayHiToNick = createGreeting("Nick", 21);
+
+console.log(sayHiToNick, nicksAge);
