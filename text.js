@@ -105,6 +105,33 @@ function rockPaperScissors (num){
     }
 }
 
+function howManyDaysInMonth(month, leapYear) {
+    switch(month) {
+        case "January":
+        case "March":
+        case "July":
+        case "October":
+        case "December":
+        case "August":
+        days = `${month} has 31 days`;
+        break;  
+        case "April":
+        case "June":
+        case "September":
+        case "November":
+        days = `${month} has 30 days`;
+        break;
+        case  "February":
+          switch(leapYear) {
+              case true: days =`${month} has 29 days`;
+              break;
+              case false: days =`${month} has 28 days`;
+              break;
+          }
+    }
+    return days;
+}
+
 const nicksAge = yearsOld(21);
 
 const sayHiToNick = createGreeting("Nick", 21);
