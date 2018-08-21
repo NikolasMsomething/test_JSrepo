@@ -49,25 +49,60 @@ function beyond(num) {
     }
 }
 
-function decode(str) {
+function decode(str) {  //not done
   let newAr = str.split(" ")
   let newAr2 = []
     for(let i = 0; i < newAr.length; i++) {
             if(newAr[i][0] === "a") {
-              newAr2.push(newAr[i][2 + 1]);
+              newAr2.push(newAr[i][1]);
             } else if(newAr[i][0] === "b") {
-                newAr2.push(newAr[i][3 + 1]);
+                newAr2.push(newAr[i][2]);
             } else if(newAr[i][0] === "c") {
-                newAr2.push(newAr[i][4 + 1]);
+                newAr2.push(newAr[i][3]);
             } else if(newAr[i][0] === "d") {
-                newAr2.push(newAr[i][5 + 1]);
+                newAr2.push(newAr[i][4]);
             }  else  {
                 newAr2.push(" ");
             }
     }
-
   let boop = newAr2.join("");
   return boop;
+}
+
+function rockPaperScissors (num){
+    let dog = undefined;
+  if(num === 1) {
+      dog === "rock"
+  } else if (num === 2) {
+      dog === "paper"
+  } else if (num === 3) {
+      dog === "scissors"
+  }
+
+  function randomNo () {
+    return Math.floor(Math.random() * 3) + 1;
+  } 
+
+  let computerResult = randomNo();
+    if(computerResult === 1 && num === 1) {
+        return `You both chose ${dog}, it's a tie`
+    } else if(computerResult === 2 && num === 2) {
+        return `You both chose ${dog}, it's a tie`
+    } else if(computerResult === 3 && num === 3) {
+        return `You both chose ${dog}, it's a tie`
+    } else if(computerResult === 1 && num === 2) {
+        return `You chose ${dog} and the computer chose rock, you win`
+    } else if(computerResult === 1 && num === 3) {
+        return `You chose ${dog} and the computer chose rock, you lose`
+    } else if(computerResult === 2 && num === 1) {
+        return `You chose ${dog} and the computer chose paper, you lose`
+    } else if(computerResult === 2 && num === 3) {
+        return `You chose ${dog} and the computer chose paper, you win`
+    } else if(computerResult === 3 && num === 1) {
+        return `You chose ${dog} and the computer chose scissors, you win`
+    } else if(computerResult === 3 && num === 2) {
+        return `You chose ${dog} and the computer chose scissors, you lose`
+    }
 }
 
 const nicksAge = yearsOld(21);
